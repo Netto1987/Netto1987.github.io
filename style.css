@@ -58,7 +58,7 @@ nav{
     font-weight: 600;
 }
 .nav-menu li a.active, .nav-menu li a:hover{
-    color: rgb(243, 112, 6);
+    color: aqua;
     transition: 3s;
 }
 #check{
