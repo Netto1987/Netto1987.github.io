@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style:none;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Seccion del Header */
+
+header{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(23, 25, 29);
+    background-position: center;
+    background-size: cover;
+}
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo1{
+    width:100px;
+    margin-left: 20px;
+}
+.bar-btn{
+    font-size: 25px;
+    color:antiquewhite;
+    margin-right: 20px;
+    cursor:pointer;
+}
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(0,0,0,.95);
+    text-align: center;
+    transition: all .5s;
+}
+.nav-menu li {
+    display: none;
+    line-height: 30px;
+    margin: 50px 0px;
+    transition: all .5s;
+}
+.nav-menu li a{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.nav-menu li a.active, .nav-menu li a:hover{
+    color: rgb(243, 112, 6);
+    transition: 3s;
+}
+#check{
+    display:none;
+}
+#check:checked ~ .nav-menu{
+    height: 100vh;
+}
+#check:checked ~ .nav-menu li{
+    display:block;
+}
+/* Responsive para pc */
+
+@media screen and (min-width:768px) {
+    .logo1{
+        margin-left: 50px;
+    }
+    nav{
+        height: 100px;
+    }
+    .bar-btn{
+        display:none;
+    }
+    .nav-menu{
+        position:relative;
+        height:100px;
+        top:0;
+        background: none;
+        background-color: none;
+        text-align: right;
+        margin-right: 50px;
+    }
+    .nav-menu li{
+        display:inline-block;
+        line-height: 100px;
+        margin:0 20px;
+        transition:none;
+    }
+    .nav-menu ul li a{
+        font-size: 70px;
+    }  
+}
+
+/* Seccion del CRUD */
+
+section{
+    height: 100%;
+    background-color: rgb(28, 41, 68);
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+.col_3 .form_group{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.form_control{
+    padding: 6px;
+    width: 30%;
+}
+.label_form{
+    margin-bottom: 4px;
+}
+.btn{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    padding: 10px;
+    cursor: pointer;
+    box-shadow: 2rem;
+}
+.btn :hover{
+    color: rgb(0, 139, 19);
+    transition: 3s;
+}
+/* Seccion del Footer */
+
+.footer{
+    background:rgb(23, 25, 29);
+    height: auto;
+    width:100vw;
+    padding-top:40px;
+    color:#fff;
+}
+.footer_cont{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer_cont h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer_cont p{
+    max-width: 500px;
+    margin:10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.socials{
+    list-style:none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:1rem 0 3rem 0;
+}
+.socials li{
+    margin:0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i{
+    font-size: 1.1rem;
+    transition:color .4s ease;
+}
+.socials a:hover i{
+    color:aqua;
+}
+.footer_bottom{
+    background-color: brown;
+    width:100vw;
+    padding:20px 0;
+    text-align: center;
+}
+.footer_bottom p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+.footer_bottom span{
+    text-transform: uppercase;
+    opacity: .3;
+    font-weight: 200;
+}
+.btn_primary{
+    background-color: rgb(41, 216, 56);
+    border-radius: 5px;
+    padding: 12px;
+}
+.btn_danger{
+    background-color: rgb(216, 53, 41);
+    border-radius: 5px;
+    padding: 12px;
+}
